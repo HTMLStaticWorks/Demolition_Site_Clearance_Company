@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | GroundZero Demolition</title>
+    <link class="icon" type="image/svg+xml" href="./assets/favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'cream': '#FEF3C7', 'caramel': '#D97706', 'sage': '#22C55E', 'beige': '#FFFFFF', 'charcoal': '#1F2937' },
+                    fontFamily: { 'playfair': ['Montserrat', 'sans-serif'], 'inter': ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        body.theme-dark {
+            background-color: #0F172A !important;
+            color: #e5e7eb;
+        }
+        body.theme-dark .bg-beige {
+            background-color: #0f172a !important;
+        }
+        body.theme-dark .glass-card {
+            background: rgba(15, 23, 42, 0.7) !important;
+            border-color: rgba(148, 163, 184, 0.2) !important;
+        }
+        body.theme-dark .text-charcoal {
+            color: #e5e7eb !important;
+        }
+    </style>
+</head>
+<body class="bg-beige font-inter min-h-screen flex flex-col p-6 overflow-x-hidden overflow-y-auto relative">
+
+    <div class="absolute -top-20 -right-20 w-80 h-80 bg-caramel/10 rounded-full blur-3xl animate-pulse"></div>
+    <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-sage/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+    <div class="fixed top-3 right-3 sm:top-6 sm:right-6 z-50 flex items-center gap-2 sm:gap-3">
+        <button type="button" id="rtl-toggle" onclick="toggleRTL()" class="inline-flex items-center justify-center rounded-full border border-caramel bg-white/90 px-3 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm font-semibold text-caramel shadow-sm transition-all hover:bg-caramel hover:text-white">RTL</button>
+        <button type="button" id="theme-toggle" onclick="toggleTheme()" class="inline-flex items-center justify-center rounded-full border border-caramel bg-white/90 px-3 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm font-semibold text-caramel shadow-sm transition-all hover:bg-caramel hover:text-white">Theme</button>
+    </div>
+    
+    <main class="flex-1 w-full flex items-center justify-center pt-20 sm:pt-24 md:pt-0">
+        <div class="max-w-md w-full relative z-10">
+            <div class="glass-card p-10 bg-white/40 backdrop-blur-xl border border-white/20 rounded-[40px] shadow-2xl">
+                <div class="text-center mb-10 flex flex-col items-center">
+                    <a href="index.html" class="flex items-center justify-center gap-2 mb-6">
+                        <svg width="180" height="50" viewBox="0 0 180 50" class="fill-current text-caramel" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 35h6v2h-6zm8 0h6v2h-6zm-10-4h18v4H13zm20-5v9h2v-9zm2-5h2v5h-2zm-6-2h6v2h-6zm4 7h2v2h-2zm6-11v11h2V15z" opacity="0.3"/>
+                            <path d="M28 10L16 22v10h16V22L28 10zm2 18H18v-4h12v4zm-2-14l6 6H20l6-6z"/>
+                            <circle cx="38" cy="18" r="3"/>
+                            <line x1="28" y1="10" x2="38" y2="18" stroke="currentColor" stroke-width="1.5"/>
+                            <text x="46" y="25" font-family="Montserrat" font-size="14" font-weight="700" fill="currentColor">GroundZero</text>
+                            <text x="46" y="37" font-family="Montserrat" font-size="9" font-weight="500" letter-spacing="1" fill="currentColor">DEMOLITION</text>
+                        </svg>
+                    </a>
+                    <h1 class="text-3xl font-bold text-charcoal">Create Your Account</h1>
+                    <p class="text-gray-500">Join our contractor and project planning network today</p>
+                </div>
+                <form class="space-y-5">
+                    <div>
+                        <label class="block text-sm font-bold text-charcoal mb-2">Full Name</label>
+                        <input type="text" class="w-full bg-white/50 border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-caramel outline-none transition-all" placeholder="John Doe">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-charcoal mb-2">Email Address</label>
+                        <input type="email" class="w-full bg-white/50 border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-caramel outline-none transition-all" placeholder="name@example.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-charcoal mb-2">Password</label>
+                        <input type="password" class="w-full bg-white/50 border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-caramel outline-none transition-all" placeholder="••••••••">
+                    </div>
+                    
+                    <label for="agree-terms" class="inline-flex items-start gap-2 text-xs text-gray-600 leading-relaxed">
+                        <input type="checkbox" id="agree-terms" required class="mt-0.5 w-4 h-4 accent-caramel rounded">
+                        <span>I agree to the <a href="#" class="text-caramel underline">Terms & Conditions</a> and <a href="#" class="text-caramel underline">Privacy Policy</a>.</span>
+                    </label>
+
+                    <div class="text-xs text-gray-500 leading-relaxed">
+                        By clicking "Create Account", you agree to our <a href="#" class="text-caramel underline">Terms of Service</a> and <a href="#" class="text-caramel underline">Privacy Policy</a>.
+                    </div>
+
+                    <button type="submit" class="w-full btn-primary py-4 text-lg border-none">Create Account</button>
+
+                    <div class="relative py-2">
+                        <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-gray-200"></div></div>
+                        <div class="relative flex justify-center text-sm"><span class="px-2 bg-white/40 text-gray-500">Or continue with</span></div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <a href="#" class="flex items-center justify-center gap-2 py-3 border-2 border-gray-200 bg-white rounded-2xl hover:bg-beige transition-all text-charcoal">
+                            <i class="fab fa-google"></i> Google
+                        </a>
+                        <a href="#" class="flex items-center justify-center gap-2 py-3 border-2 border-gray-200 bg-white rounded-2xl hover:bg-beige transition-all text-charcoal">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </a>
+                        <a href="#" class="flex items-center justify-center gap-2 py-3 border-2 border-gray-200 bg-white rounded-2xl hover:bg-beige transition-all text-charcoal">
+                            <i class="fab fa-apple"></i> Apple
+                        </a>
+                    </div>
+                </form>
+                <p class="text-center mt-8 text-gray-600">
+                    Already have an account? <a href="login.html" class="text-caramel font-bold hover:underline">Sign in instead</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
