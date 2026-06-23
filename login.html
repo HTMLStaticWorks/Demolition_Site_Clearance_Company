@@ -33,6 +33,17 @@
         body.theme-dark .text-charcoal {
             color: #e5e7eb !important;
         }
+        body.theme-dark .social-auth-btn {
+            background-color: #1E293B !important;
+            border-color: #334155 !important;
+            color: #e5e7eb !important;
+        }
+        body.theme-dark .social-auth-btn:hover {
+            background-color: #334155 !important;
+            border-color: #D97706 !important;
+            box-shadow: 0 10px 25px rgba(217, 119, 6, 0.18);
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body class="bg-beige font-inter min-h-screen flex flex-col p-6 overflow-x-hidden overflow-y-auto relative">
@@ -40,7 +51,7 @@
     <!-- Decorative Elements -->
     <div class="absolute -top-20 -left-20 w-80 h-80 bg-caramel/10 rounded-full blur-3xl animate-pulse"></div>
     <div class="absolute -bottom-20 -right-20 w-80 h-80 bg-sage/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
-    <div class="fixed top-3 right-3 sm:top-6 sm:right-6 z-50 flex items-center gap-2 sm:gap-3">
+    <div class="fixed top-3 right-3 sm:top-6 sm:right-6 lg:top-8 lg:right-8 xl:top-6 xl:right-6 z-50 flex items-center gap-2 sm:gap-3">
         <button type="button" id="rtl-toggle" onclick="toggleRTL()" class="inline-flex items-center justify-center rounded-full border border-caramel bg-white/90 px-3 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm font-semibold text-caramel shadow-sm transition-all hover:bg-caramel hover:text-white">RTL</button>
         <button type="button" id="theme-toggle" onclick="toggleTheme()" class="inline-flex items-center justify-center rounded-full border border-caramel bg-white/90 px-3 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm font-semibold text-caramel shadow-sm transition-all hover:bg-caramel hover:text-white">Theme</button>
     </div>
@@ -74,7 +85,10 @@
                     <div>
                         <label class="block text-sm font-bold text-charcoal mb-2">Password</label>
                         <div class="relative">
-                            <input type="password" class="w-full bg-white/50 border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-caramel outline-none transition-all" placeholder="********">
+                            <input id="login-password" type="password" class="w-full bg-white/50 border-none rounded-2xl px-6 py-4 pr-14 focus:ring-2 focus:ring-caramel outline-none transition-all" placeholder="********">
+                            <button type="button" data-password-toggle data-target="login-password" class="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 transition-colors hover:text-caramel" aria-label="Show password">
+                                <i class="fas fa-eye"></i>
+                            </button>
                         </div>
                     </div>
                     
@@ -94,13 +108,13 @@
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <a href="#" class="flex items-center justify-center gap-2 py-3 border-2 border-gray-200 bg-white rounded-2xl hover:bg-beige transition-all text-charcoal">
+                        <a href="#" class="social-auth-btn flex items-center justify-center gap-2 py-3 border-2 border-gray-200 bg-white rounded-2xl transition-all text-charcoal hover:bg-beige hover:border-caramel hover:shadow-md hover:-translate-y-0.5">
                             <i class="fab fa-google"></i> Google
                         </a>
-                        <a href="#" class="flex items-center justify-center gap-2 py-3 border-2 border-gray-200 bg-white rounded-2xl hover:bg-beige transition-all text-charcoal">
+                        <a href="#" class="social-auth-btn flex items-center justify-center gap-2 py-3 border-2 border-gray-200 bg-white rounded-2xl transition-all text-charcoal hover:bg-beige hover:border-caramel hover:shadow-md hover:-translate-y-0.5">
                             <i class="fab fa-facebook"></i> Facebook
                         </a>
-                        <a href="#" class="flex items-center justify-center gap-2 py-3 border-2 border-gray-200 bg-white rounded-2xl hover:bg-beige transition-all text-charcoal">
+                        <a href="#" class="social-auth-btn flex items-center justify-center gap-2 py-3 border-2 border-gray-200 bg-white rounded-2xl transition-all text-charcoal hover:bg-beige hover:border-caramel hover:shadow-md hover:-translate-y-0.5">
                             <i class="fab fa-apple"></i> Apple
                         </a>
                     </div>
@@ -113,5 +127,20 @@
     </main>
 
     <script src="./assets/js/main.js"></script>
+    <script>
+        document.querySelectorAll('[data-password-toggle]').forEach((button) => {
+            button.addEventListener('click', () => {
+                const input = document.getElementById(button.dataset.target);
+                const icon = button.querySelector('i');
+                if (!input || !icon) return;
+
+                const isPassword = input.type === 'password';
+                input.type = isPassword ? 'text' : 'password';
+                icon.classList.toggle('fa-eye', !isPassword);
+                icon.classList.toggle('fa-eye-slash', isPassword);
+                button.setAttribute('aria-label', isPassword ? 'Hide password' : 'Show password');
+            });
+        });
+    </script>
 </body>
 </html>

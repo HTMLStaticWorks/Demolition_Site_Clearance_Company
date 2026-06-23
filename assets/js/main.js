@@ -6,6 +6,14 @@ const safeGet = (key) => {
     }
 };
 
+const syncBrandAlignment = () => {
+    document.querySelectorAll('a[href="index.html"] svg[viewBox="0 0 180 50"] text').forEach((text) => {
+        text.setAttribute('direction', 'ltr');
+        text.setAttribute('unicode-bidi', 'bidi-override');
+        text.setAttribute('text-anchor', 'start');
+    });
+};
+
 // Apply persisted UI preferences globally (all pages using main.js)
 (() => {
     const savedDirection = safeGet('site-direction');
@@ -24,6 +32,8 @@ const safeGet = (key) => {
     if (rtlToggle) {
         rtlToggle.textContent = document.documentElement.getAttribute('dir') === 'rtl' ? 'LTR' : 'RTL';
     }
+
+    syncBrandAlignment();
 })();
 
 window.toggleTheme = function toggleTheme() {
@@ -57,6 +67,8 @@ window.toggleRTL = function toggleRTL() {
     if (rtlToggle) {
         rtlToggle.textContent = nextDirection === 'rtl' ? 'LTR' : 'RTL';
     }
+
+    syncBrandAlignment();
 };
 
 // Initialize AOS (guarded)

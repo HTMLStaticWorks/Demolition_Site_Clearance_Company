@@ -95,13 +95,13 @@
     <!-- Hero Section -->
     <section class="pt-40 pb-24 px-6 relative overflow-hidden">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-            <div data-aos="fade-right">
+            <div data-aos="fade-right" class="text-center lg:text-left">
                 <span class="font-accent text-caramel text-3xl mb-4 block">Projects</span>
                 <h1 class="text-5xl md:text-7xl font-playfair font-bold text-charcoal mb-8 leading-tight">Proven <br> Performance.</h1>
                 <p class="text-lg text-gray-600 mb-8 leading-relaxed">
                     Explore our portfolio of successfully completed residential, commercial, industrial, and selective demolition projects.
                 </p>
-                <div class="flex items-center gap-6">
+                <div class="flex items-center justify-center lg:justify-start gap-6 mx-auto lg:mx-0">
                     <div class="flex flex-col">
                         <span class="text-4xl font-playfair font-bold text-caramel">500+</span>
                         <span class="text-sm uppercase tracking-widest text-gray-500">Projects Completed</span>
@@ -113,7 +113,7 @@
                     </div>
                 </div>
             </div>
-            <div class="relative" data-aos="fade-left">
+            <div class="relative mt-10 lg:mt-0" data-aos="fade-left">
                 <div class="relative z-10 rounded-[50px] overflow-hidden shadow-2xl">
                     <img src="https://img.freepik.com/free-photo/bulldozer-foreground_1112-1884.jpg?semt=ais_hybrid&w=740&q=80" alt="Projects Hero" class="w-full">
                 </div>
@@ -126,6 +126,10 @@
     <!-- Project Image Grid -->
     <section class="pb-24 px-6">
         <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="font-accent text-caramel text-3xl mb-3 block">Projects</span>
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold text-charcoal">Featured Projects</h2>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="aspect-[4/3] rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all relative group">
                     <img src="https://img.freepik.com/free-photo/scene-construction-site-with-equipment_23-2151317288.jpg?semt=ais_hybrid&w=740&q=80" alt="Commercial Site" class="w-full h-full object-cover">
@@ -369,17 +373,23 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="bg-white/10 border border-white/20 rounded-3xl p-8">
-                    <i class="fas fa-helmet-safety text-caramel text-3xl mb-5"></i>
+                    <div class="mb-5 flex justify-center">
+                        <i class="fas fa-helmet-safety text-caramel text-3xl"></i>
+                    </div>
                     <h3 class="text-2xl font-bold mb-3">OSHA Compliance</h3>
                     <p class="text-gray-200">Zero-incident culture through comprehensive site risk assessments and trained crews.</p>
                 </div>
                 <div class="bg-white/10 border border-white/20 rounded-3xl p-8">
-                    <i class="fas fa-recycle text-caramel text-3xl mb-5"></i>
+                    <div class="mb-5 flex justify-center">
+                        <i class="fas fa-recycle text-caramel text-3xl"></i>
+                    </div>
                     <h3 class="text-2xl font-bold mb-3">Eco-Friendly Recycling</h3>
                     <p class="text-gray-200">Active sorting and concrete crushing to achieve high salvage and recycling rates.</p>
                 </div>
                 <div class="bg-white/10 border border-white/20 rounded-3xl p-8">
-                    <i class="fas fa-truck-pickup text-caramel text-3xl mb-5"></i>
+                    <div class="mb-5 flex justify-center">
+                        <i class="fas fa-truck-pickup text-caramel text-3xl"></i>
+                    </div>
                     <h3 class="text-2xl font-bold mb-3">Modern Fleet</h3>
                     <p class="text-gray-200">High-reach excavators, concrete processors, and crushing machinery ready for action.</p>
                 </div>
@@ -440,11 +450,16 @@
                     <p class="text-gray-600 mb-4">Get project updates and industry news straight to your inbox.</p>
                     <form class="relative">
                         <input type="email" placeholder="Your email" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 outline-none focus:border-caramel transition-colors">
-                        <button type="button" class="absolute right-2 top-2 bg-caramel text-white w-10 h-10 rounded-lg flex items-center justify-center hover:bg-caramel/90 transition-colors">
+                        <button type="button" class="absolute right-2 top-1/2 -translate-y-1/2 bg-caramel text-white w-10 h-10 rounded-lg flex items-center justify-center hover:bg-caramel/90 transition-colors">
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>
                 </div>
+            </div>
+            <div class="flex justify-end mb-8">
+                <a href="#" class="w-12 h-12 rounded-full bg-caramel text-white flex items-center justify-center shadow-lg hover:bg-caramel/90 transition-colors" aria-label="Back to top" title="Back to top">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
             </div>
             <div class="pt-8 border-t border-gray-200 text-center text-gray-500 text-sm">
                 <p>&copy; 2026 GroundZero Demolition. All rights reserved.</p>

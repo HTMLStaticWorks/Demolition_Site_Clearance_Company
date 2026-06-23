@@ -95,13 +95,13 @@
     <!-- Hero Section -->
     <section class="pt-40 pb-24 px-6 relative overflow-hidden">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-            <div data-aos="fade-right">
-                <span class="font-accent text-caramel text-3xl mb-4 block">Blog</span>
-                <h1 class="text-5xl md:text-7xl font-playfair font-bold text-charcoal mb-8 leading-tight">Demolition News <br> & Insights.</h1>
+            <div data-aos="fade-right" class="text-center lg:text-left">
+                <span class="font-accent text-caramel text-3xl mb-4 block w-fit mx-auto lg:mx-0">Blog</span>
+                <h1 class="text-5xl md:text-7xl font-playfair font-bold text-charcoal mb-8 leading-tight mx-auto max-w-3xl">Demolition News <br> & Insights.</h1>
                 <p class="text-lg text-gray-600 mb-8 leading-relaxed">
                     Safety guides, material recycling insights, project updates, and site preparation tips from our industry experts.
                 </p>
-                <div class="flex items-center gap-6">
+                <div class="flex items-center justify-center lg:justify-start gap-6 mx-auto lg:mx-0">
                     <div class="flex flex-col">
                         <span class="text-4xl font-playfair font-bold text-caramel">500+</span>
                         <span class="text-sm uppercase tracking-widest text-gray-500">Projects Completed</span>
@@ -125,7 +125,11 @@
 
     <!-- Blog Posts Grid -->
     <section class="pb-24 px-6">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="max-w-md md:max-w-2xl lg:max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-10">
+            <div class="col-span-full text-center mb-2">
+                <span class="font-accent text-caramel text-3xl mb-3 block">Latest</span>
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold text-charcoal">Industry Insights</h2>
+            </div>
             <!-- Blog Post 1 -->
             <article class="bg-white rounded-[40px] overflow-hidden shadow-sm hover:shadow-xl transition-all group h-full flex flex-col">
                 <div class="h-64 overflow-hidden">
@@ -214,23 +218,31 @@
                 <h2 class="text-4xl md:text-5xl font-playfair font-bold text-charcoal">Browse by Category</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white rounded-3xl p-7 border border-gray-100">
-                    <i class="fas fa-helmet-safety text-caramel text-2xl mb-4"></i>
+                <div class="bg-white rounded-3xl p-7 border border-gray-100 text-center">
+                    <div class="mb-4 flex justify-center">
+                        <i class="fas fa-helmet-safety text-caramel text-2xl"></i>
+                    </div>
                     <h3 class="text-2xl font-bold text-charcoal mb-2 font-playfair">Site Safety</h3>
                     <p class="text-gray-600">OSHA rules, hazard assessments, and risk control.</p>
                 </div>
-                <div class="bg-white rounded-3xl p-7 border border-gray-100">
-                    <i class="fas fa-recycle text-caramel text-2xl mb-4"></i>
+                <div class="bg-white rounded-3xl p-7 border border-gray-100 text-center">
+                    <div class="mb-4 flex justify-center">
+                        <i class="fas fa-recycle text-caramel text-2xl"></i>
+                    </div>
                     <h3 class="text-2xl font-bold text-charcoal mb-2 font-playfair">Recycling & Salvage</h3>
                     <p class="text-gray-600">Concrete crushing, scrap sorting, and eco metrics.</p>
                 </div>
-                <div class="bg-white rounded-3xl p-7 border border-gray-100">
-                    <i class="fas fa-building text-caramel text-2xl mb-4"></i>
+                <div class="bg-white rounded-3xl p-7 border border-gray-100 text-center">
+                    <div class="mb-4 flex justify-center">
+                        <i class="fas fa-building text-caramel text-2xl"></i>
+                    </div>
                     <h3 class="text-2xl font-bold text-charcoal mb-2 font-playfair">Demolition Methods</h3>
                     <p class="text-gray-600">High-reach, selective, and interior strip-outs.</p>
                 </div>
-                <div class="bg-white rounded-3xl p-7 border border-gray-100">
-                    <i class="fas fa-file-contract text-caramel text-2xl mb-4"></i>
+                <div class="bg-white rounded-3xl p-7 border border-gray-100 text-center">
+                    <div class="mb-4 flex justify-center">
+                        <i class="fas fa-file-contract text-caramel text-2xl"></i>
+                    </div>
                     <h3 class="text-2xl font-bold text-charcoal mb-2 font-playfair">Compliance</h3>
                     <p class="text-gray-600">Municipal permits, EPA rules, and site planning.</p>
                 </div>
@@ -249,10 +261,7 @@
                     <img src="https://t3.ftcdn.net/jpg/20/26/95/50/360_F_2026955096_SWGgw1xQP0pjmMB124gC3tcrAgQEzDR6.jpg" alt="Lead Engineer" class="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700">
                 </div>
                 <!-- Floating Card -->
-                <div class="absolute -bottom-6 -right-6 z-20 bg-caramel text-white p-8 rounded-3xl shadow-xl max-w-xs hidden sm:block">
-                    <p class="text-3xl font-playfair font-bold mb-2">20+ Yrs</p>
-                    <p class="text-sm font-semibold uppercase tracking-wider opacity-90">Heavy industrial dismantling experience & safety management</p>
-                </div>
+                
                 <div class="absolute -top-10 -left-10 w-40 h-40 bg-caramel/10 rounded-full blur-3xl"></div>
             </div>
             
@@ -279,9 +288,9 @@
                     </div>
                 </div>
 
-                <div class="flex flex-wrap gap-4">
-                    <a href="#" class="inline-flex items-center justify-center rounded-full bg-caramel px-6 py-3.5 text-sm font-bold text-white shadow-md transition-all hover:bg-caramel/90">Download Safety Manual</a>
-                    <a href="contact.html" class="inline-flex items-center justify-center rounded-full border border-gray-300 bg-white px-6 py-3.5 text-sm font-bold text-charcoal shadow-sm transition-all hover:bg-gray-50">Speak to Marcus</a>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#" class="inline-flex w-full sm:flex-1 items-center justify-center rounded-full bg-caramel px-6 py-3.5 text-sm font-bold text-white shadow-md transition-all hover:bg-caramel/90">Download Safety Manual</a>
+                    <a href="contact.html" class="inline-flex w-full sm:flex-1 items-center justify-center rounded-full border border-gray-300 bg-white px-6 py-3.5 text-sm font-bold text-charcoal shadow-sm transition-all hover:bg-gray-50">Speak to Marcus</a>
                 </div>
             </div>
         </div>
@@ -460,11 +469,16 @@
                     <p class="text-gray-600 mb-4">Get project updates and industry news straight to your inbox.</p>
                     <form class="relative">
                         <input type="email" placeholder="Your email" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 outline-none focus:border-caramel transition-colors">
-                        <button type="button" class="absolute right-2 top-2 bg-caramel text-white w-10 h-10 rounded-lg flex items-center justify-center hover:bg-caramel/90 transition-colors">
+                        <button type="button" class="absolute right-2 top-1/2 -translate-y-1/2 bg-caramel text-white w-10 h-10 rounded-lg flex items-center justify-center hover:bg-caramel/90 transition-colors">
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>
                 </div>
+            </div>
+            <div class="flex justify-end mb-8">
+                <a href="#" class="w-12 h-12 rounded-full bg-caramel text-white flex items-center justify-center shadow-lg hover:bg-caramel/90 transition-colors" aria-label="Back to top" title="Back to top">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
             </div>
             <div class="pt-8 border-t border-gray-200 text-center text-gray-500 text-sm">
                 <p>&copy; 2026 GroundZero Demolition. All rights reserved.</p>

@@ -147,6 +147,10 @@
     animation: float 6s ease-in-out infinite;
 }
 
+#navbar svg.animate-float {
+    animation: none;
+}
+
 /* Smooth Entrance */
 .reveal {
     opacity: 0;
@@ -225,6 +229,11 @@ body.theme-dark select {
     background-color: #1E293B !important;
     color: #e5e7eb !important;
     border-color: #334155 !important;
+}
+
+[dir="rtl"] footer form.relative button {
+    right: auto;
+    left: 0.5rem;
 }
 
 body.theme-dark #navbar {
