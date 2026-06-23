@@ -51,12 +51,12 @@
     <!-- Decorative Elements -->
     <div class="absolute -top-20 -left-20 w-80 h-80 bg-caramel/10 rounded-full blur-3xl animate-pulse"></div>
     <div class="absolute -bottom-20 -right-20 w-80 h-80 bg-sage/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
-    <div class="fixed top-3 right-3 sm:top-6 sm:right-6 lg:top-8 lg:right-8 xl:top-6 xl:right-6 z-50 flex items-center gap-2 sm:gap-3">
-        <button type="button" id="rtl-toggle" onclick="toggleRTL()" class="inline-flex items-center justify-center rounded-full border border-caramel bg-white/90 px-3 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm font-semibold text-caramel shadow-sm transition-all hover:bg-caramel hover:text-white">RTL</button>
-        <button type="button" id="theme-toggle" onclick="toggleTheme()" class="inline-flex items-center justify-center rounded-full border border-caramel bg-white/90 px-3 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm font-semibold text-caramel shadow-sm transition-all hover:bg-caramel hover:text-white">Theme</button>
+    <div class="fixed top-3 right-3 sm:top-6 sm:right-6 lg:top-8 lg:right-8 xl:top-6 xl:right-6 rtl:right-auto rtl:left-3 rtl:sm:left-6 rtl:lg:left-8 rtl:xl:left-6 z-50 flex items-center gap-2 sm:gap-3">
+        <button type="button" id="rtl-toggle" class="rtl-toggle w-8 h-8 sm:w-10 sm:h-10 inline-flex items-center justify-center rounded-full border border-caramel bg-white/90 text-xs sm:text-sm font-semibold text-caramel shadow-sm transition-all hover:bg-caramel hover:text-white" onclick="toggleRTL()" aria-label="Toggle RTL/LTR"><i class="fas fa-language text-sm sm:text-base"></i></button>
+        <button type="button" id="theme-toggle" class="theme-toggle w-8 h-8 sm:w-10 sm:h-10 inline-flex items-center justify-center rounded-full border border-caramel bg-white/90 text-xs sm:text-sm font-semibold text-caramel shadow-sm transition-all hover:bg-caramel hover:text-white" onclick="toggleTheme()" aria-label="Toggle Theme"><i class="fas fa-moon text-sm sm:text-base"></i></button>
     </div>
     
-    <main class="flex-1 w-full flex items-center justify-center pt-20 sm:pt-24 md:pt-0">
+    <main class="flex-1 w-full flex items-center justify-center py-20 sm:py-24">
         <!-- Login Container -->
         <div class="max-w-md w-full relative z-10">
             <div class="glass-card p-10 bg-white/40 backdrop-blur-xl border border-white/20 rounded-[40px] shadow-2xl">
@@ -107,7 +107,7 @@
                         <div class="relative flex justify-center text-sm"><span class="px-2 bg-white/40 text-gray-500">Or continue with</span></div>
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div class="grid grid-cols-1 gap-3">
                         <a href="#" class="social-auth-btn flex items-center justify-center gap-2 py-3 border-2 border-gray-200 bg-white rounded-2xl transition-all text-charcoal hover:bg-beige hover:border-caramel hover:shadow-md hover:-translate-y-0.5">
                             <i class="fab fa-google"></i> Google
                         </a>

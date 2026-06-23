@@ -80,8 +80,8 @@
             </div>
 
             <div class="hidden xl:flex items-center gap-3">
-                <button type="button" id="rtl-toggle" onclick="toggleRTL()" class="inline-flex items-center justify-center rounded-full border border-caramel bg-white/90 px-4 py-2 text-sm font-semibold text-caramel shadow-sm transition-all hover:bg-caramel hover:text-white">RTL</button>
-                <button type="button" id="theme-toggle" onclick="toggleTheme()" class="inline-flex items-center justify-center rounded-full border border-caramel bg-white/90 px-4 py-2 text-sm font-semibold text-caramel shadow-sm transition-all hover:bg-caramel hover:text-white">Theme</button>
+                <button type="button" id="rtl-toggle" class="rtl-toggle w-10 h-10 inline-flex items-center justify-center rounded-full border border-caramel bg-white/90 text-sm font-semibold text-caramel shadow-sm transition-all hover:bg-caramel hover:text-white" onclick="toggleRTL()" aria-label="Toggle RTL/LTR"><i class="fas fa-language text-base"></i></button>
+                <button type="button" id="theme-toggle" class="theme-toggle w-10 h-10 inline-flex items-center justify-center rounded-full border border-caramel bg-white/90 text-sm font-semibold text-caramel shadow-sm transition-all hover:bg-caramel hover:text-white" onclick="toggleTheme()" aria-label="Toggle Theme"><i class="fas fa-moon text-base"></i></button>
                 <a href="login.html" class="inline-flex items-center justify-center rounded-full bg-caramel px-5 py-2 text-sm font-semibold text-white shadow-md transition-all hover:bg-caramel/90">Login</a>
             </div>
             
@@ -435,9 +435,9 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white py-12 px-6 border-t border-gray-100">
+    <footer class="bg-white pt-12 pb-6 px-6 border-t border-gray-100">
         <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-4">
                 <div>
                     <a href="index.html" class="flex items-center gap-2 mb-6">
                         <svg width="180" height="50" viewBox="0 0 180 50" class="fill-current text-caramel" xmlns="http://www.w3.org/2000/svg">
@@ -493,12 +493,10 @@
                     </form>
                 </div>
             </div>
-            <div class="flex justify-end mb-8">
-                <a href="#" class="w-12 h-12 rounded-full bg-caramel text-white flex items-center justify-center shadow-lg hover:bg-caramel/90 transition-colors" aria-label="Back to top" title="Back to top">
-                    <i class="fas fa-arrow-up"></i>
-                </a>
-            </div>
-            <div class="pt-8 border-t border-gray-200 text-center text-gray-500 text-sm">
+            <a href="#" class="fixed bottom-6 right-6 rtl:right-auto rtl:left-6 w-12 h-12 rounded-full bg-caramel text-white flex items-center justify-center shadow-lg hover:bg-caramel/90 hover:scale-110 active:scale-95 transition-all z-50" aria-label="Back to top" title="Back to top">
+                <i class="fas fa-arrow-up"></i>
+            </a>
+            <div class="pt-6 border-t border-gray-200 text-center text-gray-500 text-sm">
                 <p>&copy; 2026 GroundZero Demolition. All rights reserved.</p>
             </div>
         </div>

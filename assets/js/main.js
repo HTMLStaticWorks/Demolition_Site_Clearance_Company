@@ -1,4 +1,4 @@
-const safeGet = (key) => {
+﻿const safeGet = (key) => {
     try {
         return window.localStorage.getItem(key);
     } catch (e) {
@@ -23,15 +23,13 @@ const syncBrandAlignment = () => {
     const isDark = savedTheme === 'dark';
     document.body.classList.toggle('theme-dark', isDark);
 
-    const themeToggle = document.getElementById('theme-toggle');
-    if (themeToggle) {
-        themeToggle.textContent = isDark ? 'Light' : 'Theme';
-    }
+    document.querySelectorAll('#theme-toggle, .theme-toggle').forEach(el => {
+        el.innerHTML = isDark ? '<i class="fas fa-sun text-base"></i>' : '<i class="fas fa-moon text-base"></i>';
+    });
 
-    const rtlToggle = document.getElementById('rtl-toggle');
-    if (rtlToggle) {
-        rtlToggle.textContent = document.documentElement.getAttribute('dir') === 'rtl' ? 'LTR' : 'RTL';
-    }
+    document.querySelectorAll('#rtl-toggle, .rtl-toggle').forEach(el => {
+        el.innerHTML = '<i class="fas fa-language text-base"></i>';
+    });
 
     syncBrandAlignment();
 })();
@@ -46,10 +44,9 @@ window.toggleTheme = function toggleTheme() {
         // Ignore localStorage write errors.
     }
 
-    const themeToggle = document.getElementById('theme-toggle');
-    if (themeToggle) {
-        themeToggle.textContent = isDark ? 'Light' : 'Theme';
-    }
+    document.querySelectorAll('#theme-toggle, .theme-toggle').forEach(el => {
+        el.innerHTML = isDark ? '<i class="fas fa-sun text-base"></i>' : '<i class="fas fa-moon text-base"></i>';
+    });
 };
 
 window.toggleRTL = function toggleRTL() {
@@ -63,10 +60,9 @@ window.toggleRTL = function toggleRTL() {
         // Ignore localStorage write errors.
     }
 
-    const rtlToggle = document.getElementById('rtl-toggle');
-    if (rtlToggle) {
-        rtlToggle.textContent = nextDirection === 'rtl' ? 'LTR' : 'RTL';
-    }
+    document.querySelectorAll('#rtl-toggle, .rtl-toggle').forEach(el => {
+        el.innerHTML = '<i class="fas fa-language text-base"></i>';
+    });
 
     syncBrandAlignment();
 };
@@ -182,8 +178,12 @@ if (!mobileMenu) {
         <a href="blog.html" class="hover:text-caramel transition-colors">Blog</a>
         <a href="contact.html" class="hover:text-caramel transition-colors">Contact</a>
         <div class="mt-4 flex items-center gap-3">
-            <button type="button" onclick="toggleRTL()" class="inline-flex items-center justify-center rounded-full border border-caramel bg-white/90 px-4 py-2 text-sm font-semibold text-caramel shadow-sm transition-all hover:bg-caramel hover:text-white">RTL</button>
-            <button type="button" onclick="toggleTheme()" class="inline-flex items-center justify-center rounded-full border border-caramel bg-white/90 px-4 py-2 text-sm font-semibold text-caramel shadow-sm transition-all hover:bg-caramel hover:text-white">Theme</button>
+            <button type="button" class="rtl-toggle w-10 h-10 inline-flex items-center justify-center rounded-full border border-caramel bg-white/90 text-sm font-semibold text-caramel shadow-sm transition-all hover:bg-caramel hover:text-white" onclick="toggleRTL()" aria-label="Toggle RTL/LTR">
+                <i class="fas fa-language text-base"></i>
+            </button>
+            <button type="button" class="theme-toggle w-10 h-10 inline-flex items-center justify-center rounded-full border border-caramel bg-white/90 text-sm font-semibold text-caramel shadow-sm transition-all hover:bg-caramel hover:text-white" onclick="toggleTheme()" aria-label="Toggle Theme">
+                <i class="fas fa-moon text-base"></i>
+            </button>
             <a href="login.html" class="inline-flex items-center justify-center rounded-full bg-caramel px-5 py-2 text-sm font-semibold text-white shadow-md transition-all hover:bg-caramel/90">Login</a>
         </div>
     `;
